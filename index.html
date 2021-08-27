@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Calculador IMC</title> 
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<link rel="stylesheet" type="text/css" href="style.js">
+		<script type="text/javascript">
+			function IMC() {										
+				var altura=document.getElementById('altura').value; 
+				var peso=document.getElementById('peso').value;
+				var result = (peso/(altura*altura));
+				
+
+				document.getElementById("result").innerHTML="Tu IMC es: " + result;
+			}
+		</script><!-- funcion la cual permite el calculo del IMC-->
+	<body>
+		<header>
+			<h1>El Índice de Masa Corporal (IMC) es una medida de asociación entre el peso y la talla de una persona.<br> El IMC es usado como uno de varios indicadores para evaluar el estado nutricional.</h1>	
+		</header> <!-- Encabezado de la web-->
+		<div>
+			<h2>Calculador de IMC</h2> 
+			<p class="text">Altura</p>
+			<input type="text" id="altura">
+			<p class="text">Peso</p>
+			<input type="text" id="peso">
+			<p id="result"></p>
+			<button id="btn" onClick="IMC()">Calcular</button>
+			<p id="info">Ingrese su altura (m) y su peso (kg)</p>
+		</div> <!-- Caja de la calculadora -->
+		<div class="div2">
+			<h3>¿Cómo se mide el IMC?</h3>	
+			<p class="text1">La fórmula del IMC es el peso en kilógramos dividido por el cuadrado de la altura en metros (kg/m2). El IMC es una indicación simple de la relación entre el peso y la talla que se utiliza frecuentemente para identificar el sobrepeso y la obesidad en los adultos, tanto a nivel individual como poblacional.</p>	
+		</div> <!-- Caja de texto informativo -->
+		<img class="imagen"src="imc_foto.jpg"> <!-- Imagen -->	
+		<footer>
+			<br>
+			Consecuencias del sobrepeso <br><br>
+			El sobrepeso puede causar la elevación de la concentración de colesterol total y de la presión arterial, y aumentar el riesgo de sufrir la enfermedad arterial coronaria. La obesidad aumenta las probabilidades de que se presenten otros factores de riesgo cardiovascular, en especial, presión arterial alta, colesterol elevado y diabetes.<br><br>
+		</footer><!-- Pie de pagina -->
+	</body>
+
+</html>
